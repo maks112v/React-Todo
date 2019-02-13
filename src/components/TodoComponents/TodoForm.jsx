@@ -11,7 +11,7 @@ export default (props) => {
         </InputGroup>
         <br/>
         <Button color="text" type="submit" className="btn btn-outline-primary">Add To List</Button>
-        <Button className="ml-4" color="success">Clear Completed Tasks</Button>
+        <Button className="ml-4" color="success" onClick={props.filterHandler}>Clear Completed Tasks</Button>
         <Button className="ml-4" color="danger" onClick={props.resetHandler}>Clear Tasks</Button>
       </form>
     </div>
