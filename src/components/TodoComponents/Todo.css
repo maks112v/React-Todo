@@ -1,0 +1,19 @@
+.hover {
+  transition: .2s;
+}
+
+.hover:hover {
+  background-color: #c3e6cb;
+  cursor: pointer;
+  text-decoration: line-through;
+}
+
+.task-completed {
+  transition: .2s;
+  text-decoration: line-through;
+}
+
+.task-completed:hover {
+  text-decoration: none;
+  background-color: #f5c6cb;
+}
