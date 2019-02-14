@@ -59,12 +59,12 @@ class App extends Component {
   }
 
   resetHandler = () => {
-    Cookies.set('todos', start);
+    Cookies.set('todos', [...start]);
     this.setState({
-      todos: start,
+      todos: [...start],
       todo: '',
     })
-    this.updateDisplay(start);
+    this.updateDisplay([...start]);
   }
 
   filterHandler = () =>{
