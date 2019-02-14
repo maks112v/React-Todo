@@ -76,10 +76,10 @@ class App extends Component {
   }
 
   searchFilter = e =>{
-    const displayTodos = [...this.state.todos].filter( current => current.task.toLowerCase().includes(e.target.value));
+    const displayTodos = [...this.state.todos].filter( current => current.task.toLowerCase().includes(e.target.value.toLowerCase()));
     this.setState({
       searchWord: e.target.value,
-      displayTodos: displayTodos,
+      displayTodos
     });
   }
 
@@ -115,8 +115,8 @@ class App extends Component {
     return (
       <Container className="py-5">
         <SearchBar value={this.state.searchWord} searchHandler={this.searchFilter} clearSearch={this.clearSearch} />
-        <Tasks todos={this.state.displayTodos} clickHandler={this.clickHandler} searchWord={this.state.searchWord} />
         <TodoForm addTodo={this.addTask} changeHandler={this.changeHandler} filterHandler={this.filterHandler} todo={this.state.todo} resetHandler={this.resetHandler} />
+        <Tasks todos={this.state.displayTodos} clickHandler={this.clickHandler} searchWord={this.state.searchWord} />
       </Container>
     );
   }
