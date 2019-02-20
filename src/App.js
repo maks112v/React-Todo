@@ -56,7 +56,7 @@ class App extends Component {
     }
   }
 
-  updateDisplay = current => {
+  updateDisplay = current =>  {
     this.setState({
       displayTodos: current,
     })
